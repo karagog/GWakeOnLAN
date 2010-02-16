@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GWakeonlan", "GWakeonlan.vcproj", "{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{87B0C082-21F0-42FC-93A9-8B146A7F09DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}.Debug|Win32.Build.0 = Debug|Win32
+		{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}.Release|Win32.ActiveCfg = Release|Win32
+		{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}.Release|Win32.Build.0 = Release|Win32
+		{87B0C082-21F0-42FC-93A9-8B146A7F09DC}.Debug|Win32.ActiveCfg = Debug
+		{87B0C082-21F0-42FC-93A9-8B146A7F09DC}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

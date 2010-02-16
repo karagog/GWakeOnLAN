@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SendPacket</class>
+ <widget class="QMainWindow" name="SendPacket">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>155</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SendPacket</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Target MAC Address:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="mac_in">
+        <property name="text">
+         <string>00-00-00-00-00-00</string>
+        </property>
+        <property name="maxLength">
+         <number>17</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="send_btn">
+        <property name="text">
+         <string>Send Magic Packet</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLabel" name="eventLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>440</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionBrowse_MySQL_Database"/>
+    <addaction name="actionListen"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionBrowse_MySQL_Database">
+   <property name="text">
+    <string>Browse Database</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to MySQL Database to find MAC addresses</string>
+   </property>
+  </action>
+  <action name="actionListen">
+   <property name="text">
+    <string>Listen for Magic Packets</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>send_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>SendPacket</receiver>
+   <slot>send_packet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>send_packet()</slot>
+ </slots>
+</ui>

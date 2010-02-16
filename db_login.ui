@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>395</width>
+    <height>227</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Database Selector</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>MySQL Database</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Local SQLite Database</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QWidget" name="mysql_form" native="true">
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Database address or hostname: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="host_in">
+        <property name="text">
+         <string>firewall.gdomain</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Username:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="user_in">
+        <property name="text">
+         <string>george</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="pass_in">
+        <property name="text">
+         <string>d43plainView.</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>host_in</tabstop>
+  <tabstop>user_in</tabstop>
+  <tabstop>pass_in</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>connect_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Form</receiver>
+   <slot>update_db_form(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_in</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Form</receiver>
+   <slot>connect_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>host_in</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Form</receiver>
+   <slot>connect_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pass_in</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Form</receiver>
+   <slot>connect_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>connect_clicked()</slot>
+  <slot>update_db_form(int)</slot>
+ </slots>
+</ui>
