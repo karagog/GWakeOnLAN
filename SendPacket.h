@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   SendPacket.h
  * Author: rootinc
  *
@@ -24,10 +24,12 @@ public slots:
     void update_mac_address(QString newaddr);
 
 private slots:
-    void open_mysql_browser();
+    void open_db_browser();
     void open_packet_listener();
     void send_packet();
-    void clearLabel();
+
+    void show_about();
+    void whatsthis();
 
 private:
     Ui::SendPacket widget;

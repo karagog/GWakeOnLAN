@@ -10,11 +10,13 @@
 #include "db_selection.h"
 #include "helpers.h"
 #include "packet_listener.h"
+#include "about_window.h"
 #include <QUdpSocket>
 #include <QString>
 #include <QMessageBox>
 #include <QTimer>
 #include <QFile>
+#include <QWhatsThis>
 //#include <cassert>
 
 SendPacket::SendPacket() {
@@ -30,17 +32,19 @@ SendPacket::SendPacket() {
 
     // Connect up the actions in the file menu
     connect(widget.actionQuit, SIGNAL(triggered()), this, SLOT(close()));
-    connect(widget.actionBrowse_MySQL_Database, SIGNAL(triggered()), this, SLOT(open_mysql_browser()));
+    connect(widget.actionBrowse_MySQL_Database, SIGNAL(triggered()), this, SLOT(open_db_browser()));
     connect(widget.actionListen, SIGNAL(triggered()), this, SLOT(open_packet_listener()));
+    connect(widget.actionAbout, SIGNAL(triggered()), this, SLOT(show_about()));
+    connect(widget.actionWhatsThis, SIGNAL(triggered()), this, SLOT(whatsthis()));
 }
 
 SendPacket::~SendPacket() {
 }
 
 
-void SendPacket::open_mysql_browser()
+void SendPacket::open_db_browser()
 {
-	db_connection_form->show();
+    db_connection_form->show();
 }
 
 void SendPacket::open_packet_listener()
@@ -50,82 +54,81 @@ void SendPacket::open_packet_listener()
 
 void SendPacket::update_mac_address(QString newaddr)
 {
-	widget.mac_in->setText(newaddr);
+    widget.mac_in->setText(newaddr);
 }
 
 void SendPacket::send_packet()
 {
-	// Magic packet = 6 bytes of (0xff) followed by 16 repetitions of the target MAC address
-	QByteArray mp(6, (char)0xff);
-	QByteArray mac;
-        QByteArray tempArray;
+    // Magic packet = 6 bytes of (0xff) followed by 16 repetitions of the target MAC address
+    QByteArray mp(6, (char)0xff);
+    QByteArray mac;
+    QByteArray tempArray;
 
-	QString smac = widget.mac_in->text();
-	int count = 0;
-	char t = 0;
+    QString smac = widget.mac_in->text();
+    int count = 0;
+    char t = 0;
 
-	for(int i = 0; i < smac.size(); i++)
-	{
-		if(!char_to_hex(smac[i].toLower().toAscii(), t))
-		{
-			continue;
-		}
-
-		tempArray.append(t);
-		count++;
-	}
-
-	if(count != 12)
-	{
-		show_message("You must enter a valid MAC address");
-		return;
-	}
-
-        // Consolidate every two bytes into one byte (the bytes are really nibbles)
-        for(int i = 0; i <= 8; i+=4)
+    for(int i = 0; i < smac.size(); i++)
+    {
+        if(!char_to_hex(smac[i].toLower().toAscii(), t))
         {
-            char t1, t2;
-
-            t1 = combine_nibbles(tempArray[i], tempArray[i + 1]);
-            t2 = combine_nibbles(tempArray[i+2], tempArray[i + 3]);
-            mac.append(t1);
-            mac.append(t2);
-            //Note: This doesn't make any sense to me why I have to append the second
-                // char before the first, but it must be that way if it is to be in order
+            continue;
         }
 
-	// Copy the mac address 16 times onto the magic packet
-	for(int i = 0; i < 16; i++)
-	{
-		mp.append(mac);
-	}
+        tempArray.append(t);
+        count++;
+    }
 
-        
-        QFile tf("temp.txt");
-        tf.open(QIODevice::ReadWrite | QIODevice::Truncate);
-        tf.write(mac);
-        tf.close();
-	//mp.append((char)0x00);
+    if(count != 12)
+    {
+        show_message("You must enter a valid MAC address");
+        return;
+    }
 
-	// Now send it
-	if(sock->writeDatagram(mp, QHostAddress::Broadcast, 9) != mp.size())
-        {
-            QMessageBox::warning(this, "Error Sending Magic Packet",
-                                "I was unable to sent the packet for some reason");
-            return;
-        }
+    // Consolidate every two bytes into one byte (the bytes are really nibbles)
+    for(int i = 0; i <= 8; i+=4)
+    {
+        char t1, t2;
+
+        t1 = combine_nibbles(tempArray[i], tempArray[i + 1]);
+        t2 = combine_nibbles(tempArray[i+2], tempArray[i + 3]);
+        mac.append(t1);
+        mac.append(t2);
+        //Note: This doesn't make any sense to me why I have to append the second
+        // char before the first, but it must be that way if it is to be in order
+    }
+
+    // Copy the mac address 16 times onto the magic packet
+    for(int i = 0; i < 16; i++)
+    {
+        mp.append(mac);
+    }
 
 
-        widget.eventLabel->setText("Magic Packet Sent");
-        labelCount++;
+    QFile tf("temp.txt");
+    tf.open(QIODevice::ReadWrite | QIODevice::Truncate);
+    tf.write(mac);
+    tf.close();
+    //mp.append((char)0x00);
 
-        QTimer::singleShot(2000, this, SLOT(clearLabel()));
+    // Now send it
+    if(sock->writeDatagram(mp, QHostAddress::Broadcast, 9) != mp.size())
+    {
+        QMessageBox::warning(this, "Error Sending Magic Packet",
+                             "I was unable to sent the packet for some reason");
+        return;
+    }
+
+    widget.statusbar->showMessage("Packet Sent");
 }
 
-void SendPacket::clearLabel()
+void SendPacket::show_about()
 {
-    if((labelCount--) == 1)
-    {
-	widget.eventLabel->clear();
-    }
+    about_window ab;
+    ab.exec();
+}
+
+void SendPacket::whatsthis()
+{
+    QWhatsThis::enterWhatsThisMode();
 }

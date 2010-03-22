@@ -15,62 +15,44 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0ECF67B863404FA7BF3A698382C0F416"
+        "MsmKey" = "8:_26C2BE8A46B4411092EC495745938525"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_292AFC15266B4206B80A845AE71966C3"
+        "MsmKey" = "8:_6A686FD8E6B145BB8C7A89317A5AFA81"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_43582089B384F093CCCC3E1030562A43"
-        "OwnerKey" = "8:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5DB62BD19D884E1182F8F34C1930DC4E"
+        "MsmKey" = "8:_83EDE7F13AC144D4BAFF5D317F9B051E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AEC54A508BD14731A5732C3A865950D9"
-        "OwnerKey" = "8:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
+        "MsmKey" = "8:_9AEFFDF27DC8469BB85639142ECD064C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D99EBFDD57C14F0FAC9F4A5C731A6EA6"
-        "OwnerKey" = "8:_AEC54A508BD14731A5732C3A865950D9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E9DAD79AB9AC4460B9FEDE095229CFEB"
+        "MsmKey" = "8:_9C7255BB7CCB4A0D852377A0F01289FC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED2B3AD927E84FF2A9946D48B668EB43"
+        "MsmKey" = "8:_B1BA383F5CAC4B2395A3DD9FDC6EA2BA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FC4245C4FFDF321FDB59CDB8778B03DD"
-        "OwnerKey" = "8:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
+        "MsmKey" = "8:_FD43CDFD136C43A992337E3C9C48E885"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -98,6 +80,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -157,69 +152,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0ECF67B863404FA7BF3A698382C0F416"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_26C2BE8A46B4411092EC495745938525"
             {
-            "SourcePath" = "8:C:\\Qt\\4.6.1\\plugins\\sqldrivers\\qsqlmysql4.dll"
-            "TargetName" = "8:qsqlmysql4.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_292AFC15266B4206B80A845AE71966C3"
-            {
-            "SourcePath" = "8:C:\\Qt\\4.6.1\\lib\\QtCore4.dll"
-            "TargetName" = "8:QtCore4.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43582089B384F093CCCC3E1030562A43"
-            {
-            "SourcePath" = "8:QtCore4.dll"
-            "TargetName" = "8:QtCore4.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5DB62BD19D884E1182F8F34C1930DC4E"
-            {
-            "SourcePath" = "8:C:\\Qt\\4.6.1\\lib\\QtSql4.dll"
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtSql4.dll"
             "TargetName" = "8:QtSql4.dll"
             "Tag" = "8:"
             "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
@@ -237,10 +172,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E9DAD79AB9AC4460B9FEDE095229CFEB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A686FD8E6B145BB8C7A89317A5AFA81"
             {
-            "SourcePath" = "8:C:\\Qt\\4.6.1\\lib\\QtGui4.dll"
-            "TargetName" = "8:QtGui4.dll"
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\mingwm10.dll"
+            "TargetName" = "8:mingwm10.dll"
             "Tag" = "8:"
             "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
             "Condition" = "8:"
@@ -257,9 +192,49 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED2B3AD927E84FF2A9946D48B668EB43"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83EDE7F13AC144D4BAFF5D317F9B051E"
             {
-            "SourcePath" = "8:C:\\Qt\\4.6.1\\lib\\QtNetwork4.dll"
+            "SourcePath" = "8:..\\Release\\gwakeonlan.exe"
+            "TargetName" = "8:gwakeonlan.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AEFFDF27DC8469BB85639142ECD064C"
+            {
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\libgcc_s_dw2-1.dll"
+            "TargetName" = "8:libgcc_s_dw2-1.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9C7255BB7CCB4A0D852377A0F01289FC"
+            {
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtNetwork4.dll"
             "TargetName" = "8:QtNetwork4.dll"
             "Tag" = "8:"
             "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
@@ -277,9 +252,29 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC4245C4FFDF321FDB59CDB8778B03DD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B1BA383F5CAC4B2395A3DD9FDC6EA2BA"
             {
-            "SourcePath" = "8:QtGui4.dll"
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtCore4.dll"
+            "TargetName" = "8:QtCore4.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD43CDFD136C43A992337E3C9C48E885"
+            {
+            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtGui4.dll"
             "TargetName" = "8:QtGui4.dll"
             "Tag" = "8:"
             "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
@@ -293,8 +288,8 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -353,14 +348,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GWakeonlan"
-        "ProductCode" = "8:{6C292426-86EB-4467-A62C-DCB932A4342D}"
-        "PackageCode" = "8:{17A9B759-426A-4489-B01F-EF1FA50BD1E2}"
+        "ProductCode" = "8:{71CFA506-B107-420D-A8D5-78D85F2D795C}"
+        "PackageCode" = "8:{8A852E9D-B4F5-4D18-A8A4-DFDC8DEF9068}"
         "UpgradeCode" = "8:{669B0C79-5269-41EC-AE55-144F83337803}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
-        "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "DetectNewerInstalledVersion" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:0.0.0"
         "Manufacturer" = "8:Rapstallion"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -473,15 +468,29 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2073A11A59424F7EA998165F2734EDDD"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_17F77A1E11F343D393BDA5CE25B89CED"
             {
-            "Name" = "8:GWakeonlan"
+            "Name" = "8:GWakeonLAN"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
+            "Target" = "8:_83EDE7F13AC144D4BAFF5D317F9B051E"
+            "Folder" = "8:_6976FB2093524657B0903D06343C8F2F"
+            "WorkingFolder" = "8:_196AC36420384A97ABFED370F3F60699"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2073A11A59424F7EA998165F2734EDDD"
+            {
+            "Name" = "8:GWakeonLAN"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_83EDE7F13AC144D4BAFF5D317F9B051E"
             "Folder" = "8:_1BA043FA95EE4EB69DC601EF737EEB0D"
             "WorkingFolder" = "8:_196AC36420384A97ABFED370F3F60699"
             "Icon" = "8:"
@@ -632,8 +641,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This program is protected by the Apache License version 2.0 (see source code for details)"
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -645,8 +654,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:The installer will guide you through the steps required to install GWakeonLAN (pronounced GWake-on-LAN) on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -883,65 +892,9 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_AEC54A508BD14731A5732C3A865950D9"
-            {
-            "UseDynamicProperties" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:policy_9_0_Microsoft_VC90_CRT_x86.msm"
-                "Properties"
-                {
-                }
-            "LanguageId" = "3:0"
-            "Exclude" = "11:FALSE"
-            "Folder" = "8:"
-            "Feature" = "8:"
-            "IsolateTo" = "8:"
-            }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_D99EBFDD57C14F0FAC9F4A5C731A6EA6"
-            {
-            "UseDynamicProperties" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:microsoft_vc90_crt_x86.msm"
-                "Properties"
-                {
-                }
-            "LanguageId" = "3:0"
-            "Exclude" = "11:FALSE"
-            "Folder" = "8:"
-            "Feature" = "8:"
-            "IsolateTo" = "8:"
-            }
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D7A9D885550C4BF4B6E6CBC6DEFB3D65"
-            {
-            "SourcePath" = "8:..\\Release\\GWakeonlan.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{18640657-CBFD-420F-AFC6-AAE39BA8FDB5}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
         }
     }
 }

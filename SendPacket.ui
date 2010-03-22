@@ -53,10 +53,13 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="2">
-       <widget class="QLabel" name="eventLabel">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btn_load">
+        <property name="toolTip">
+         <string>Load MAC addresses from a backing store</string>
+        </property>
         <property name="text">
-         <string/>
+         <string>Load</string>
         </property>
        </widget>
       </item>
@@ -70,19 +73,33 @@
      <x>0</x>
      <y>0</y>
      <width>440</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionBrowse_MySQL_Database"/>
-    <addaction name="actionListen"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
+   <widget class="QMenu" name="menu_Tools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionBrowse_MySQL_Database"/>
+    <addaction name="actionListen"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionWhatsThis"/>
+    <addaction name="actionAbout"/>
+   </widget>
    <addaction name="menu_File"/>
+   <addaction name="menu_Tools"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQuit">
@@ -92,7 +109,7 @@
   </action>
   <action name="actionBrowse_MySQL_Database">
    <property name="text">
-    <string>Browse Database</string>
+    <string>Get MACs from a Database</string>
    </property>
    <property name="toolTip">
     <string>Connect to MySQL Database to find MAC addresses</string>
@@ -101,6 +118,16 @@
   <action name="actionListen">
    <property name="text">
     <string>Listen for Magic Packets</string>
+   </property>
+  </action>
+  <action name="actionWhatsThis">
+   <property name="text">
+    <string>What's This?</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
    </property>
   </action>
  </widget>
@@ -113,8 +140,8 @@
    <slot>send_packet()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>212</x>
-     <y>122</y>
+     <x>352</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
      <x>106</x>
@@ -122,8 +149,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_load</sender>
+   <signal>clicked()</signal>
+   <receiver>SendPacket</receiver>
+   <slot>open_db_browser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>109</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>send_packet()</slot>
+  <slot>open_db_browser()</slot>
  </slots>
 </ui>
