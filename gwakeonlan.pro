@@ -18,3 +18,7 @@ FORMS += SendPacket.ui \
     about_window.ui
 QT += sql \
     network
+
+unix{
+LIBS += -Wl,-rpath,/usr/local/lib/gwakeonlan
+}
