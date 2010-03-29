@@ -17,7 +17,11 @@ FORMS += SendPacket.ui \
     db_browser.ui \
     about_window.ui
 QT += sql \
-    network
+    network xml
+
+INCLUDEPATH += include
+
+LIBS += -Llib -lGQtUtil
 
 unix{
 LIBS += -Wl,-rpath,/usr/local/lib/gwakeonlan

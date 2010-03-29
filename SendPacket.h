@@ -9,6 +9,7 @@
 #define	_SENDPACKET_H
 
 #include "ui_SendPacket.h"
+#include "settings.h"
 
 class QUdpSocket;
 class creds_dialog;
@@ -38,6 +39,8 @@ private:
     packet_listener * listen_form;
 
     int labelCount;
+
+    GUtil::Qt::Settings settings;
 };
 
 #endif	/* _SENDPACKET_H */

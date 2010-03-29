@@ -11,6 +11,7 @@
 #include "helpers.h"
 #include "packet_listener.h"
 #include "about_window.h"
+#include "exception.h"
 #include <QUdpSocket>
 #include <QString>
 #include <QMessageBox>
@@ -22,6 +23,11 @@
 SendPacket::SendPacket() {
     widget.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose, true);
+
+    settings.Initialize("GWakeonLAN");
+    settings.Export();
+
+
 
     labelCount = 0;
 

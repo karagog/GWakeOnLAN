@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>db_selector</class>
+ <widget class="QWidget" name="db_selector">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -38,13 +38,6 @@
        <widget class="QLabel" name="label">
         <property name="text">
          <string>Database address or hostname: </string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="host_in">
-        <property name="text">
-         <string/>
         </property>
        </widget>
       </item>
@@ -99,6 +92,13 @@
         </property>
        </widget>
       </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="host_in">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -106,7 +106,6 @@
  </widget>
  <tabstops>
   <tabstop>comboBox</tabstop>
-  <tabstop>host_in</tabstop>
   <tabstop>user_in</tabstop>
   <tabstop>pass_in</tabstop>
   <tabstop>pushButton</tabstop>
@@ -117,7 +116,7 @@
   <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>Form</receiver>
+   <receiver>db_selector</receiver>
    <slot>connect_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -133,7 +132,7 @@
   <connection>
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>Form</receiver>
+   <receiver>db_selector</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -149,7 +148,7 @@
   <connection>
    <sender>comboBox</sender>
    <signal>currentIndexChanged(int)</signal>
-   <receiver>Form</receiver>
+   <receiver>db_selector</receiver>
    <slot>update_db_form(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -165,7 +164,7 @@
   <connection>
    <sender>user_in</sender>
    <signal>returnPressed()</signal>
-   <receiver>Form</receiver>
+   <receiver>db_selector</receiver>
    <slot>connect_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -179,25 +178,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>host_in</sender>
-   <signal>returnPressed()</signal>
-   <receiver>Form</receiver>
-   <slot>connect_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>330</x>
-     <y>57</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>389</x>
-     <y>58</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pass_in</sender>
    <signal>returnPressed()</signal>
-   <receiver>Form</receiver>
+   <receiver>db_selector</receiver>
    <slot>connect_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -207,6 +190,38 @@
     <hint type="destinationlabel">
      <x>389</x>
      <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>host_in</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>user_in</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>host_in</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>pass_in</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>117</y>
     </hint>
    </hints>
   </connection>
