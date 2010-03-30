@@ -106,6 +106,7 @@
  </widget>
  <tabstops>
   <tabstop>comboBox</tabstop>
+  <tabstop>host_in</tabstop>
   <tabstop>user_in</tabstop>
   <tabstop>pass_in</tabstop>
   <tabstop>pushButton</tabstop>
