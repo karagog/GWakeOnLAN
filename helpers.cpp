@@ -6,7 +6,7 @@ bool char_to_hex(char input, char & output)
 {
         //Note: assumes memory already allocated
 
-        //Translage the ascii character to a 4 bit hex number 0x30-0x39 are 0-9, and 0x61-0x66 are a-f
+        //Translate the ascii character to a 4 bit hex number 0x30-0x39 are 0-9, and 0x61-0x66 are a-f
 
         char lnib, rnib;
 

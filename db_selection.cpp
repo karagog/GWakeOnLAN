@@ -5,24 +5,20 @@
 
 #define MAX_HOST_HISTORY 10
 
+using namespace GUtil::Qt;
+
 creds_dialog::creds_dialog(QWidget * parent, Qt::WindowFlags f)
     : QWidget(parent, f)
 {
     mine.setupUi(this);
+
+    settings = new Settings("GWakeonLAN");
 
     db_form = new db_browser(0, 0);
     connect(db_form, SIGNAL(notify_selection(QString)), parent, SLOT(update_mac_address(QString)));
 
     connect(this, SIGNAL(update_host_info(QString, QString, QString, QString, e_databases)), db_form, SLOT(set_host_data(QString, QString, QString, QString, e_databases)));
 
-
-
-    if(!settings.Initialize("GWakeonLAN"))
-//    if(settings.status() != QSettings::NoError)
-    {
-
-        QMessageBox::information(0, "poop","Can't save settings");
-    }
 }
 
 
@@ -39,14 +35,14 @@ void creds_dialog::refresh_hostlist()
     }
     //mine.host_in->setCurrentIndex(0);
 
-    mine.user_in->setText(settings.Value("lastusername"));
+    mine.user_in->setText(settings->Value("lastusername"));
     mine.pass_in->setText(saved_password);
 }
 
 QStringList creds_dialog::get_hostname_list()
 {
     QStringList ret;
-    QString v = settings.Value("hostnames");
+    QString v = settings->Value("hostnames");
 
     if(v != "")
     {
@@ -86,9 +82,9 @@ void creds_dialog::connect_clicked()
         names_cat.resize(names_cat.length() - 1);
 
     saved_password = mine.pass_in->text();
-    settings.SetValue("hostnames", names_cat);
-    settings.SetValue("lastusername", mine.user_in->text());
-    QString probe = settings.Value("hostnames");
+    settings->SetValue("hostnames", names_cat);
+    settings->SetValue("lastusername", mine.user_in->text());
+    QString probe = settings->Value("hostnames");
 
     update_host_info(hn, mine.user_in->text(), mine.pass_in->text(), db_file, (e_databases)mine.comboBox->currentIndex());
 

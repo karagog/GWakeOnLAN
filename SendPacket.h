@@ -40,7 +40,7 @@ private:
 
     int labelCount;
 
-    GUtil::Qt::Settings settings;
+    GUtil::Qt::Settings *settings;
 };
 
 #endif	/* _SENDPACKET_H */

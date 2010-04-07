@@ -32,7 +32,7 @@ private:
     QString db_file;
     QString saved_password;
 
-    GUtil::Qt::Settings settings;
+    GUtil::Qt::Settings *settings;
     QStringList get_hostname_list();
     void refresh_hostlist();
 };

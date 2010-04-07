@@ -19,13 +19,13 @@
 #include <QFile>
 #include <QWhatsThis>
 //#include <cassert>
+using namespace GUtil::Qt;
 
 SendPacket::SendPacket() {
     widget.setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose, true);
 
-    settings.Initialize("GWakeonLAN");
-    settings.Export();
+    settings = new Settings("GWakeonLAN");
 
 
 
