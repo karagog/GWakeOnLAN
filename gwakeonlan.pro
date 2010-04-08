@@ -21,12 +21,12 @@ QT += sql \
 
 INCLUDEPATH += include
 
-LIBS += -Llib -lGQtUtil -lgutil
+LIBS += -Llib
 
 win32 {
-LIBS += -lcryptoppmingw
+LIBS += -lGQtUtil -lgutil -lcryptoppmingw
 }
 
 unix{
-LIBS += -lcryptoppmingw -Wl,-rpath,/usr/local/lib/gwakeonlan
+LIBS += -lGQtUtil_linux -lgutil_linux -lcryptopp -Wl,-rpath,/usr/local/lib/gwakeonlan
 }

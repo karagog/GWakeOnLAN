@@ -37,11 +37,13 @@ void packet_listener::start_listening()
     if(res == false)
     {
         QMessageBox::information(this, "Invalid port", "You must enter a valid port number");
+        return;
     }
 
     if(!sock->bind(port))
     {
         QMessageBox::information(this, "Bind failed", "Unable to bind to the specified port");
+        return;
     }
 
     connect(sock, SIGNAL(readyRead()), this, SLOT(packet_in()));
