@@ -27,7 +27,7 @@ namespace GUtil
         Exception(const std::string & message);
         ~Exception() throw(){}
 
-        void SetMessage(const std::string &msg);
+        void setMessage(const std::string &msg);
 
         std::string Message() const;
 
