@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_967DD96AD29741DB81CEFCE8153C6BE9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9AEFFDF27DC8469BB85639142ECD064C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,12 +46,6 @@
         "Entry"
         {
         "MsmKey" = "8:_B1BA383F5CAC4B2395A3DD9FDC6EA2BA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D61C840513B54D77A3E36BA5CFEC2102"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -224,26 +212,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_967DD96AD29741DB81CEFCE8153C6BE9"
-            {
-            "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtXml4.dll"
-            "TargetName" = "8:QtXml4.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AEFFDF27DC8469BB85639142ECD064C"
             {
             "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\libgcc_s_dw2-1.dll"
@@ -288,26 +256,6 @@
             {
             "SourcePath" = "8:C:\\Qt\\4.6_stable\\bin\\QtCore4.dll"
             "TargetName" = "8:QtCore4.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D61C840513B54D77A3E36BA5CFEC2102"
-            {
-            "SourcePath" = "8:..\\..\\..\\lib\\GUtil\\Qt\\release\\GQtUtil.dll"
-            "TargetName" = "8:GQtUtil.dll"
             "Tag" = "8:"
             "Folder" = "8:_196AC36420384A97ABFED370F3F60699"
             "Condition" = "8:"
@@ -400,8 +348,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GWakeonlan"
-        "ProductCode" = "8:{9BB6F01B-AF36-4A26-AB96-C35CB395FB3F}"
-        "PackageCode" = "8:{C7EF51F7-6F24-4BAB-8226-620AB32F54E6}"
+        "ProductCode" = "8:{76E8225B-7119-465B-8C7A-86F872DB16E5}"
+        "PackageCode" = "8:{F1084869-CA3A-462C-B1A8-4D871A8E1B61}"
         "UpgradeCode" = "8:{669B0C79-5269-41EC-AE55-144F83337803}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"

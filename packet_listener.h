@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   packet_listener.h
  * Author: rootinc
  *
@@ -21,6 +21,8 @@ public:
 
 private slots:
     void start_listening();
+    void stop_listening();
+
     void packet_in();
     void clear_results();
 

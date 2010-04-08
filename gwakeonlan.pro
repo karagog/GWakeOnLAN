@@ -17,7 +17,7 @@ FORMS += SendPacket.ui \
     db_browser.ui \
     about_window.ui
 QT += sql \
-    network xml
+    network
 
 INCLUDEPATH += include
 

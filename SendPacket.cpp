@@ -118,14 +118,21 @@ void SendPacket::send_packet()
     //mp.append((char)0x00);
 
     // Now send it
-    if(sock->writeDatagram(mp, QHostAddress::Broadcast, 9) != mp.size())
+    int p =  widget.port_in->text().toInt();
+    if(p > 0 && p < 65535)
     {
-        QMessageBox::warning(this, "Error Sending Magic Packet",
-                             "I was unable to sent the packet for some reason");
-        return;
+        if(sock->writeDatagram(mp, QHostAddress::Broadcast, p) != mp.size())
+        {
+            QMessageBox::warning(this, "Error Sending Magic Packet",
+                                 "I was unable to sent the packet for some reason");
+            return;
+        }
+        widget.statusbar->showMessage("Packet Sent");
     }
-
-    widget.statusbar->showMessage("Packet Sent");
+    else
+    {
+        QMessageBox::information(this, "Error", "Enter a valid port number");
+    }
 }
 
 void SendPacket::show_about()

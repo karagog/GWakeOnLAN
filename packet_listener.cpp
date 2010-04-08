@@ -29,7 +29,10 @@ packet_listener::~packet_listener() {
 void packet_listener::start_listening()
 {
     bool res = false;
-    int port = widget.lineEdit->text().toInt(&res);
+    QString port_txt = widget.lineEdit->text();
+    int port = port_txt.toInt(&res);
+
+    stop_listening();
 
     if(res == false)
     {
@@ -42,6 +45,15 @@ void packet_listener::start_listening()
     }
 
     connect(sock, SIGNAL(readyRead()), this, SLOT(packet_in()));
+
+    widget.lbl_status->setText("Listening on port " + port_txt);
+}
+
+void packet_listener::stop_listening()
+{
+   sock->close();
+
+   widget.lbl_status->clear();
 }
 
 void packet_listener::clear_results()
