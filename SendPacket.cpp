@@ -18,7 +18,7 @@
 #include <QTimer>
 #include <QFile>
 #include <QWhatsThis>
-//#include <cassert>
+#include "widgethelpers.h"
 using namespace GUtil::Qt;
 
 SendPacket::SendPacket() {
@@ -26,8 +26,6 @@ SendPacket::SendPacket() {
     setAttribute(Qt::WA_DeleteOnClose, true);
 
     settings = new Settings("GWakeonLAN");
-
-
 
     labelCount = 0;
 
@@ -50,11 +48,13 @@ SendPacket::~SendPacket() {
 
 void SendPacket::open_db_browser()
 {
+    WidgetHelpers::centerOverWidget(this, db_connection_form);
     db_connection_form->show();
 }
 
 void SendPacket::open_packet_listener()
 {
+    WidgetHelpers::centerOverWidget(this, listen_form);
     listen_form->show();
 }
 
@@ -138,6 +138,7 @@ void SendPacket::send_packet()
 void SendPacket::show_about()
 {
     about_window ab;
+    WidgetHelpers::centerOverWidget(this, &ab);
     ab.exec();
 }
 

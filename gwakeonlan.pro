@@ -24,9 +24,9 @@ INCLUDEPATH += include
 LIBS += -Llib
 
 win32 {
-LIBS += -lGQtUtil -lgutil -lcryptoppmingw
+LIBS += -lGQtUtil -lgutil
 }
 
 unix{
-LIBS += -lGQtUtil_linux -lgutil_linux -lcryptopp -Wl,-rpath,/usr/local/lib/gwakeonlan
+LIBS += -lGQtUtil_linux -lgutil_linux -Wl,-rpath,/usr/local/lib/gwakeonlan
 }
